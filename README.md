@@ -16,5 +16,5 @@ It highlights the intense narrative, iconic characters, and memorable quotes fro
 -  **Custom Cursor** — Themed cursor to match the island vibe  
 -  **Responsive Design** — Works on mobile, tablet, and desktop 
 
-## Take A Look 👀: [Far Cry 3 Story Hub](https://roobis-c.github.io/FontEnd-FC2-StoryHub-/)
+## Take A Look 👀: [Far Cry 3 Story Hub](https://roobis-c.github.io/FontEnd-FC3-StoryHub-/)
 
