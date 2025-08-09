@@ -14,8 +14,7 @@ It highlights the intense narrative, iconic characters, and memorable quotes fro
 -  **Story Overview** — Condensed game story and key moments for quick reading  
 -  **Sound Effects** — Play bite-sized audio cues (voice lines / SFX) for immersion  
 -  **Custom Cursor** — Themed cursor to match the island vibe  
--  **Responsive Design** — Works on mobile, tablet, and desktop  
--  **Accessible Controls** — Keyboard and screen-reader friendly where practical
+-  **Responsive Design** — Works on mobile, tablet, and desktop 
 
 ---
 ## Take A Look: [Far Cry 3 Story Hub](https://roobis-c.github.io/FontEnd-FC2-StoryHub-/)
