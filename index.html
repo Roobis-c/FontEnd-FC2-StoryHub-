@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="asset/FarCry3_icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <title>FC3</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        cursor: url(asset/arrow.png), auto;
+    }
+    a{
+        cursor: url(asset/hand-pointer.png), auto;
+    }
+    #heading{
+         font-family: 'syne', sans-serif;
+        font-size: 2rem;
+        font-weight: 800;
+        color: rgba(178, 34, 34, 0.831);
+        margin-bottom: 20px;
+    }
+    h1{
+        font-family: 'syne', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: #b22222d4;
+        margin-bottom: 10px;
+    }
+    body {
+        height: 100%;
+        background-color: #010e14;
+        color: 	#E0E0E0;
+       
+         font-family: 'Kumbh Sans', sans-serif;
+    }
+    #body1 {
+        width: 100%;
+        height: 100vh;
+        background-image: url(asset/Far_Cry_3Bg.png);
+        background-size: cover;
+    }
+    #body1 p{
+        padding-top: 32%;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 1.2rem;
+    }
+    #mobile{
+        display: none;
+      
+    }
+
+     #character-cards{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+    }
+    #character-card{
+
+        padding: 25px;
+        border-radius: 10px;
+
+        text-align: center;
+    }
+
+    #character-card:hover{
+        transition: all 0.5s ease-in-out;
+        transform: scale(1.05);
+    }
+    #character-card img{
+        width: 250px;
+        object-fit: contain;
+    }
+    #character-card h1{
+        /* font-size: 1.5rem; */
+        margin-top: 10px;
+        color: #B22222;
+    }
+    #character-card p{
+        font-size: 1rem;
+        color: #E0E0E0;
+        margin-top: 10px;
+        width: 300px;
+    }
+    #story{
+        width: 50%;
+        padding: 20px;
+        background-image:url(asset/Transparent_bg.png); ;
+        border-radius: 10px;
+        color: #E0E0E0;
+        font-size: 1.3rem;
+    }
+    #qoute{
+        display: flex;
+        border: 0.7px solid #5c5252;
+        border-radius: 30px;
+        padding: 0px;
+        padding-bottom: -100px;
+        margin: 1px 10% 30px 10%;
+        gap: 30px;
+    
+    }
+    #left,#right{
+        width: 100%;
+    }
+
+    #right{
+        margin-top: 5%;
+    }
+    #qoute img{
+        width: 500px;
+        margin-bottom: -3px;
+        border-radius: 30px;
+    }
+    #qoute h1{
+        
+        color: white;
+        font-size: 3rem;
+    }
+    #btnPlay{
+        cursor: pointer;
+    }
+    #btnPause{
+        cursor: pointer;
+        display: none;
+
+    }
+    #tattoo{
+         width:600px;
+          margin-top: 100px;
+    }
+    #showContent{
+        color: #fc0000;
+        font-size: 1.2rem;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 100px;
+        text-decoration: underline;
+    }
+    #show{
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+    footer{
+        margin-top: 100px;
+        padding: 100px;
+        text-align: center;
+        border-top-left-radius: 300px;
+        border-top-right-radius: 300px;
+        background-image: url(asset/Transparent_bg.png);
+        }
+    footer h1{
+        font-size: 3.5rem;
+        color: #E0E0E0;}
+
+    footer p{
+        font-size: 1.2rem;
+        color: #E0E0E0;
+        margin-top: 10px;
+        }
+        #loader{
+            margin-top: 50px;
+            height: 300px;
+            width: 300px;
+        }
+        #mobile_knife{
+            display: none;
+        
+        }
+
+@media (max-width: 600px) {
+    #mobile{
+        display: block;
+        font-size: 3.2rem;
+        color: red;
+    }
+    #mobile_knife{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        width: 400px;
+    }
+    #body1 {
+        height: 100vh;
+        padding-top: 40%;
+        text-align: center;
+        background-image: none;
+        background-position: center;
+
+    }
+    #qoute h1{
+        font-size: 1rem;
+    }
+    #tattoo{
+        width: 300px;
+    }
+    #body1 p {
+        padding-top: 01%;
+        font-size: 1rem;
+        margin: 0 5%;
+        
+    }
+    #character-card img {
+        width: 180px;
+    }
+    #character-card p {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    #story {
+        width: 90%;
+        font-size: 1rem;
+    }
+    #qoute {
+        flex-direction: column;
+        gap: 15px;
+        padding: 01px;
+        font-size: 10px;
+    }
+    #qoute img {
+        width: 90%;
+    }
+    footer {
+        padding: 60px;
+    }
+    footer h1{
+
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+     #body1 {
+        height: 100vh;
+           padding-top: 40%;
+        background-position: center;
+        text-align: center;
+    }
+    #body1 p {
+        padding-top: 40%;
+        font-size: 1.1rem;
+        margin: 0 8%;
+    }
+    #character-card img {
+        width: 200px;
+    }
+    #character-card p {
+        width: 250px;
+        font-size: 1rem;
+    }
+    #story {
+        width: 70%;
+        font-size: 1.1rem;
+    }
+    #qoute {
+        flex-direction: column;
+    }
+    #qoute img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+     #body1 {
+        height: 100vh;
+           padding-top: 40%;
+        background-position: center;
+        text-align: center;
+    }
+    #body1 p {
+        padding-top: 35%;
+        font-size: 1.2rem;
+        margin: 0 10%;
+    }
+    #story {
+        width: 60%;
+    }
+    #qoute img {
+        width: 450px;
+    }
+}
+
+        
+        
+        </style>
+<body>
+    <div id="body1" >
+        <img id="mobile_knife" src="asset/knife.png" alt="">
+
+        <h1 id="mobile">Far Cry <span style="color: white;"> 3</span> </h1>
+        <p><b style="color:#B22222;"> Far Cry 3 </b> is an open-world first-person shooter developed by Ubisoft, set on a lawless tropical island. The game follows Jason Brody, a young man who must rescue his kidnapped friends and survive among pirates, mercenaries, and madness. As he explores the island, Jason is forced to adapt, turning from an average tourist into a deadly warrior. Known for its intense storytelling, unpredictable villain Vaas Montenegro, and lush, dangerous environment, Far Cry 3 is praised for blending freedom, chaos, and psychological depth into one gripping adventure.</p>
+       
+    </div>
+    <div id="body2">
+        <center>
+            <img style="margin-top: 100px;" src="asset/FarCry3_icon.png" alt="" height="250px" width="250px">
+        </center>
+        <div id="character-cards">
+            <div id="character-card">
+                <img src="asset/characters/jason.png" alt="">
+                <h1>jason Brody</h1>
+                <p> You play as Jason. He begins as an ordinary tourist but transforms into a ruthless warrior. His journey is about survival, revenge, and identity as he gets consumed by the violence and mysticism of Rook Island.</p>
+            </div>
+            <div id="character-card">
+                <img src="asset/characters/vaas.png" alt="" >
+                <h1>Vaas Montenegro</h1>
+                <p >Vaas is your first major threat. His insanity, unpredictability, and personal taunts make him a constant psychological and physical obstacle. He’s the face of chaos on the island.</p>
+            </div>
+            <div id="character-card">
+                <img src="asset/characters/citra.png" alt="" >
+                <h1>Citra Talugmai</h1>
+                <p>Citra is both a guide and a manipulator. She presents herself as a savior of the island and sees Jason as a chosen warrior. She drives the mystical aspect of the game, leading Jason deeper into the culture of the Rakyat./p>
+            </div>
+             <div id="character-card">
+                <img src="asset/characters/hyot.webp" alt="" style="width: 300px;">
+                <h1>Hoyt Volker</h1>
+                <p>A calm, manipulative businessman and slaver. Unlike Vaas’s wild nature, Hoyt represents systematic, corporate evil. He is the true mastermind controlling the island’s drug and slave trade.</p>
+            </div>
+            <div id="show">
+                <div id="character-card">
+                    <img src="asset/characters/doc.png" alt="" style="width: 200px;">
+                    <h1>Dr. Earnhardt</h1>
+                    <p>Eccentric scientist who helps Jason with medicine and missions. Despite his strange behavior,helped to rescue your friends, he's a valuable friend.</p>
+                </div>
+                <div id="character-card">
+                    <img src="asset/characters/denis.png" alt="" >
+                    <h1> Dennis Rogers</h1>
+                    <p>Dennis is your first contact with the Rakyat. He trains Jason in the ways of the warrior and introduces him to Citra and the idea of becoming a hero for the island people.</p>
+                </div>
+                <div id="character-card">
+                    <img src="asset/characters/grant.webp" alt="" style="width: 190px;">
+                    <h1>Grant Brody</h1>
+                    <p>Grant’s military background makes him a natural leader. His death in the opening scene pushes Jason onto the path of violence and revenge.</p>
+                </div>
+                <div id="character-card">
+                    <img src="asset/characters/riley.webp" alt="" style="width: 150px;">
+                    <h1>Riley Brody</h1>
+                    <p>Riley is captured by Hoyt. Rescuing him becomes one of Jason’s central motivations. His survival is tied to Jason’s inner conflict between family and the warrior path.</p>
+                </div>
+                <div id="character-card">
+                    <img src="asset/characters/sam.png" alt="" style="width: 150px;">
+                    <h1>Sam Becker</h1>
+                    <p>A charismatic, slightly eccentric German with a love for military tactics and loud humor.Vital for infiltrating Hoyt’s circle — without Sam’s guidance, Jason wouldn’t be able to get close enough to assassinate Hoyt.</p>
+                </div>
+                <div id="character-card">
+                    <img src="asset/characters/buck.png" alt="" style="width: 200px;">
+                    <h1>Buck Hughes</h1>
+                    <p>A crude and sadistic mercenary with a twisted sense of humor and an obsession with control. Holds Keith Ramsay captive and manipulates Jason into retrieving the ancient Knife of Xian through dangerous missions.</p>
+                </div>
+                <div id="character-card">
+                    <img src="asset/characters/lisa.png" alt="" style="width: 200px;">
+                    <h1>Liza Snow</h1>
+                    <p>Jason’s girlfriend who represents his life before the island’s chaos. Caring and determined, she tries to keep their group safe while struggling to understand the violent changes in Jason as he drifts further from his old self.</p>
+                </div>
+            </div>
+            <p style="cursor: url(asset/hand-pointer.png), auto;" id="showContent" onclick="showS()">More Characters</p>
+        </div>
+           <center>
+                <img id="loader" src="asset/loder.gif" alt="">
+
+                <div id="story">
+                    <h1 id="heading">Far Cry 3: Descent into Madness</h1>
+                    <p>Far Cry 3 follows the story of Jason Brody, a thrill-seeking young man whose vacation turns into a nightmare when he and his friends are kidnapped by pirates led by the unstable Vaas Montenegro on the lawless Rook Islands. After witnessing his brother Grant’s murder and escaping captivity, Jason is rescued by the native Rakyat tribe and begins a journey of transformation from an ordinary man into a ruthless warrior under the guidance of Citra, the tribe’s mysterious leader. As Jason hunts down Vaas and later the powerful drug lord Hoyt Volker to save his remaining friends, he becomes increasingly consumed by violence and vengeance. After killing both antagonists and rescuing his brother Riley, Jason is faced with a final choice: return to a normal life with his friends or embrace his dark transformation by killing them to stay with Citra and fulfill her prophecy. The game’s dual endings explore themes of identity, madness, and the cost of power, making Far Cry 3 a gripping tale of survival, morality, and descent into savagery.</p>
+                </div>
+                <img  id="tattoo" src="asset/tattoo.png" alt="">
+                <p style="margin-bottom: 100px;">"Each mark on my skin is a step deeper into the jungle, a symbol of the warrior I'm becoming."<br> -jason brody</p>
+                <div id="qoute">
+                    <div id="left" style="flex: 1; margin-left: 1px;">
+                        <img src="asset/jasonQ.png" alt="">
+                    </div>
+                    <div id="right" style="flex: 2;">
+                        <h1>I’m not a hero. I’m not a warrior. I’m just a man who wants to save his friends</h1>
+                    </div>
+                </div>
+                <div id="qoute">
+                    <div id="left" style="flex: 2; margin-top: 10%;" >
+                    <h1>You have to know the rules before you can break them. That's what I do — break the rules.</h1>
+                    <p> Did I Ever Tell You The Definition of Insanity ?</p>
+                    <svg onclick="playSound()"  id="btnPlay" style="color:red; cursor: url(asset/hand-pointer.png), auto;" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16"><path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/></svg>
+                    <svg onclick="stopSound()"  id="btnPause" style="color: red; cursor: url(asset/hand-pointer.png), auto;" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16"><path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"/></svg>
+                </div>
+                    <div id="right" style="flex: 1;">
+                        <img src="asset/vaasQ.png" alt="">
+                    </div>
+                </div>
+            </center>
+  
+    </div>  
+      <footer>
+        <h1>Crafted By <a  href="https://roobis.neocities.org/"  style="color: red;">Roobis</a> </h1>    
+        <p>Crafted with passion and love    </p>
+    </footer>    
+    
+</body>
+    <script>
+        function showS() {
+            const show = document.getElementById('show');
+            const showContent = document.getElementById('showContent');
+            if (show.style.display === "none" || show.style.display === "") {
+                show.style.display = "flex";
+                showContent.textContent = "Less Characters";
+            } else {
+                show.style.display = "none";
+                showContent.textContent = "More Characters";
+
+            }
+        }
+        const audio = new Audio('asset/simple.mp3');
+        function stopSound(){
+        const img1 = document.getElementById('btnPlay');
+        const img2 = document.getElementById('btnPause');
+           if (!audio.paused) {
+            audio.pause();    
+            audio.currentTime = 0; 
+        img1.style.display="block"
+        img2.style.display="none"      
+        }
+
+        }
+    function playSound() {
+    
+    const img1 = document.getElementById('btnPlay');
+    const img2 = document.getElementById('btnPause');
+
+    audio.onplay = () => {
+        img1.style.display="none"
+        img2.style.display="block"
+    };
+
+    audio.onended = () => {
+        img1.style.display="block"
+        img2.style.display="none"
+        
+    };
+
+    audio.play();
+}
+</script>
+</html>
