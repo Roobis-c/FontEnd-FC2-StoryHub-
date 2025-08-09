@@ -18,5 +18,5 @@ It highlights the intense narrative, iconic characters, and memorable quotes fro
 -  **Accessible Controls** — Keyboard and screen-reader friendly where practical
 
 ---
-**Take A Look:** [View on GitHub Pages](https://roobis-c.github.io/FontEnd-FC2-StoryHub-/)
+**Take A Look:**(https://roobis-c.github.io/FontEnd-FC2-StoryHub-/)
 
